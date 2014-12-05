@@ -1,0 +1,52 @@
+<span style="font-size:12px">
+<b>- 2.1.0 :</b>
+<ul><li>[NEW] Acknowledged problems can now be hidden (issue 21).</li>
+<li>[NEW] Problems with notifications disabled can now be hidden (issue 22).</li>
+<li>[NEW] Problems display in the grid can now be "Highlight the row" or "Colored icon" (issue 23).</li>
+<li>[NEW] It is now possible to acknowledge problems or remove acknowledgement from the popup (issue 27).</li>
+<li>[NEW] It is now possible to disable or enable notifications for problems from the popup (issue 27).</li>
+<li>[NEW] Columns position and size are now saved (issue 29).</li></ul>
+
+<b>- 2.0.0 :</b>
+<ul><li>[CHG] Complete code rewrite with ExtJS framework.</li>
+<li>[CHG] Problem are no longer displayed into tabs but into a grid.</li>
+<li>[CHG] statuswml.cgi is no longer used to check problems, it's status.cgi now (more detailed).</li>
+<li>[NEW] More details a displayed for problems (like duration, last check, etc...).</li>
+<li>[NEW] It is now possible to send a "Re-check" command to nagios.</li>
+<li>[NEW] It is now possible to send a "Downtime problem" command to nagios.</li>
+<li>[NEW] Downtimed problems can now be listed.</li>
+<li>[NEW] A "NEW" icon is displayed for new problems.</li></ul>
+
+<b>- 1.1.2 :</b>
+<ul><li>[BUG] "N" icon stop refreshing himself when popup is openend then closed.</li></ul>
+
+<b>- 1.1.1 :</b>
+<ul><li>[BUG] Wrong tab is activated when popup is refreshed.</li>
+<li>[CHG] 'cgi-bin path' option is replaced by 'nagios path', so 'service' and 'host' path could be out of nagios root.</li></ul>
+
+<b>- 1.1.0 :</b>
+<ul><li>[BUG] Cursor problem on option page's tab.</li>
+<li>[NEW] Active tab is now persistent for the popup.</li>
+<li>[NEW] A button in the popup to go to the nagios interface's main page.</li>
+<li>[NEW] Path and scripts names can now be customized (check the options).</li>
+<li>[NEW] A sound is played when new problem is detected (or not if you want).</li>
+<li>[CHG] Popup is now refreshed when "Update now" is clicked.</li></ul>
+
+<b>- 1.0.0 :</b>
+<ul><li>[CHG] Options management has changed, so you have to configure the extension.</li>
+<li>[NEW] Multi-server support, check the 'Add server' button on option page.</li>
+<li>[NEW] A button in the popup that opens the option page.</li></ul>
+
+<b>- 0.9.5 :</b>
+<ul><li>[BUG] Popup layout error if there is more than about 20 alerts.</li>
+<li>[NEW] A button in the popup to access the "tactical overview" of nagios.</li>
+<li>[NEW] A button in the popup to force a check.</li>
+<li>[NEW] A button in the popup to stop/start the plugin.</li>
+<li>[NEW] Check frequency is now customizable.</li>
+<li>[NEW] The icon change if some alert is detected.</li>
+<li>[CHG] The password is now hidden in the option page.</li>
+<li>[CHG] Complete re-thinking of the source code for option and popup.</li></ul>
+
+<b>- 0.9.4 :</b>
+<ul><li>[NEW] You have now to set the url to the cgi-bin path in the option page. So double-check this after updating.</li>
+<li>[BUG] cgi-bin path change with the differents versions of nagios (2.x, 3.x, ...)</li></ul></span>

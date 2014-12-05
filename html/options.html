@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Nagios Checker Options</title>
+		<link type="text/css" href="/css/cupertino/jquery-ui-1.8.6.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="/js/lib/jquery.min.js"></script> 
+		<script type="text/javascript" src="/js/lib/jquery-ui.min.js"></script>
+		<style type="text/css"> 
+			body{ font: 62.5% "Trebuchet MS", sans-serif; }
+			#tabs{ margin: auto; width: 650px; }
+			#logo{ font-size: 48px; text-align: center; font-weight: bold; }
+			#logo img { vertical-align: text-bottom; }
+			
+			/*input.text { margin-bottom:12px; width:95%; padding: .4em; }*/
+			fieldset { padding:0; border:0; margin-top:25px; }
+			.ui-dialog .ui-state-error { padding: .3em; }
+			.validateTips { border: 1px solid transparent; padding: 0.3em; }		
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="/js/options.js"></script>
+		<div id="addserver-form" title="Add new server">
+			<p class="validateTips">All form fields are required.</p>
+
+			<form>
+				<fieldset>
+					<label for="addServerName">Name</label>
+					<input type="text" name="addServerName" id="addServerName" class="text ui-widget-content ui-corner-all" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="delserver-confirm" title="">
+			<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Are you sure ?</p>
+		</div>
+		<div id="options">
+			<div id="logo"><img src="/icons/icon48.png" />AGIOS CHECKER</div>
+			<br /><br />
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">General</a></li>
+					<li><a href="#tabs-2">Notification</a></li>
+					<li><a href="#tabs-3">Servers</a></li>
+				</ul>
+				<div id="tabs-1">
+					<table width="100%">
+						<tr>
+							<td>Check frequency</td>
+							<td align="right"><div id="checkFrequency">
+								<input type="radio" name="checkFrequency" id="checkFrequency30" value="30" /><label for="checkFrequency30">30s</label>
+								<input type="radio" name="checkFrequency" id="checkFrequency60" value="60" /><label for="checkFrequency60">1m</label>
+								<input type="radio" name="checkFrequency" id="checkFrequency120" value="120" /><label for="checkFrequency120">2m</label>
+								<input type="radio" name="checkFrequency" id="checkFrequency300" value="300" /><label for="checkFrequency300">5m</label>
+								<input type="radio" name="checkFrequency" id="checkFrequency600" value="600" /><label for="checkFrequency600">10m</label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>Icon rotation frequency</td>
+							<td align="right"><div id="iconFrequency">
+								<input type="radio" name="iconFrequency" id="iconFrequency1" /><label for="iconFrequency1">1s</label>
+								<input type="radio" name="iconFrequency" id="iconFrequency2" /><label for="iconFrequency2">2s</label>
+								<input type="radio" name="iconFrequency" id="iconFrequency5" /><label for="iconFrequency5">5s</label>
+								<input type="radio" name="iconFrequency" id="iconFrequency10" /><label for="iconFrequency10">10s</label>
+								<input type="radio" name="iconFrequency" id="iconFrequency30" /><label for="iconFrequency30">30s</label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>New state duration</td>
+							<td align="right"><div id="newStateDuration">
+								<input type="radio" name="newStateDuration" id="newStateDuration60" /><label for="newStateDuration60">1m</label>
+								<input type="radio" name="newStateDuration" id="newStateDuration120" /><label for="newStateDuration120">2m</label>
+								<input type="radio" name="newStateDuration" id="newStateDuration300" /><label for="newStateDuration300">5m</label>
+								<input type="radio" name="newStateDuration" id="newStateDuration600" /><label for="newStateDuration600">10m</label>
+								<input type="radio" name="newStateDuration" id="newStateDuration1800" /><label for="newStateDuration1800">30m</label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>Problems displayed</td> 
+							<td align="right"><div id="problemsDisplayed">
+								<input type="checkbox" id="displayProblemsDowntimed" /><label for="displayProblemsDowntimed">Downtimed</label>
+								<input type="checkbox" id="displayProblemsAcknowledged" /><label for="displayProblemsAcknowledged">Acknowledged</label>
+								<input type="checkbox" id="displayProblemsNotification" /><label for="displayProblemsNotification">Notification disabled</label>
+								<input type="checkbox" id="displayProblemsOthers" /><label for="displayProblemsOthers">Others</label>
+							</div></td>
+						</tr>
+						<!--<tr>
+							<td>Grid mode</td> 
+							<td align="right"><div id="gridMode">
+								<input type="radio" name="gridMode" id="gridModeIcons" /><label for="gridModeIcons">Icons</label>
+								<input type="radio" name="gridMode" id="gridModeHighlighted" /><label for="gridModeHighlighted">Highlighted</label>
+							</div></td>
+						</tr>-->
+					</table>
+				</div>
+				<div id="tabs-2">
+					<table width="100%">
+						<tr>
+							<td>Sound</td>
+							<td align="right"><div id="sound">
+								<input type="radio" name="sound" id="soundOn" /><label for="soundOn">On</label>
+								<input type="radio" name="sound" id="soundOff" /><label for="soundOff">Off</label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>Popup</td>
+							<td align="right"><div id="popup">
+								<input type="radio" name="popup" id="popupOn" /><label for="popupOn">On</label>
+								<input type="radio" name="popup" id="popupOff" /><label for="popupOff">Off</label>
+							</div></td>
+						</tr>
+						<tr>
+							<td>Popup duration : <span id="popupDurationVal"></span></td>
+							<td align="right"><div id="popupDuration" style="width: 400px"></div></td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs-3">
+					<table width="100%">
+						<tr>
+							<td><button id="serverAdd">Add server</button><button id="serverDel">Delete server</button></td>
+							<td align="right"><div id="serverList"></div></td>
+						</tr>
+						<tr>
+							<td colspan="2"><br /><div id="serverDetails" class="ui-widget-content ui-corner-all"></div></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<br />
+			<div style="width:100%;text-align:center;"><a href="http://lab.kafe-in.net/index.php/p/nagioschecker/">NagiosChecker</a> by Fabien Dupont 2010<br />Distributed under <a href="http://lab.kafe-in.net/index.php/p/nagioschecker/page/License/">WTFPL</a> license.</div>
+		</div> 
+	</body>
+</html>

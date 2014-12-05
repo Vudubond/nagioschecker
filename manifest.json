@@ -1,0 +1,19 @@
+{
+   "background_page": "html/background.html",
+   "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_title": "Nagios Checker",
+      "popup": "html/popup.html"
+   },
+   "description": "Nagios status extension. (F.Dupont 2010)",
+   "icons": {
+      "128": "icons/icon128.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDlS2mkWT0ohqv577YvZFsOA8Kov/qa2SggHikMXAw/7I3Jz/2D9eMyAyxdAx0Torrl3mQ2qLos71RZIVEeGTBcVnvdVkhJpZiuzfD1NF18pZJ6NbscstZLh1kRp0Dpw6MCw3ikjsmbq8EY2TdvIjH/CN71UzKPkYsq25lFlNbVQIDAQAB",
+   "name": "Nagios Checker",
+   "options_page": "html/options.html",
+   "permissions": [ "http://*/*", "https://*/*", "notifications" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "3.0.0"
+}
